@@ -1,0 +1,20 @@
+package polymorphism;
+
+public class LgTV {
+
+	public void turnOn() {
+		System.out.println("LgTV Àü¿ø ON");
+	}
+	
+	public void turnOff() {
+		System.out.println("LgTV Àü¿ø OFF");
+	}
+	
+	public void soundUp() {
+		System.out.println("LgTV º¼·ý Up");
+	}
+	
+	public void soundDown() {
+		System.out.println("LgTV º¼·ý Down");
+	}
+}

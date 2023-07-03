@@ -1,0 +1,14 @@
+package polymorphism;
+
+public class TVUser {
+
+	public static void main(String[] args) {
+		TV tv = new LgTV(); //인터페이스를 사용함으로써 수정할일 최소화
+		
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+	}
+
+}

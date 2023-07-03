@@ -1,0 +1,53 @@
+package polymorphism;
+
+public class SamsungTV implements TV {
+	
+	private Speaker speaker;
+	private int price;
+	
+	public SamsungTV(SonySpeaker speaker, int price) { //index="0", index="1"
+		this.speaker = speaker;
+		this.price = price;
+		System.out.println("SamsungTV(SonySpeaker speaker, int price)");
+	}	
+	
+	//생성자:
+	public SamsungTV(SonySpeaker speaker) {
+		this.speaker = speaker;
+		System.out.println("SamsungTV(SonySpeaker speaker) 객체 생성");
+	}
+	
+	public SamsungTV() { //객체 생성되면 실행되게 기본생성자 만듬 => 확인가능
+		System.out.println("SamsungTV() 객체 생성");
+	}
+	
+	public void initMethod() { //초기설정
+		System.out.println("객체 초기화 작업 수행"); 
+
+	}
+	
+	public void destoryMethod() { //close() 연결 해제 로직 등을 호출할때 활용
+		System.out.println("객체 소멸시 동작하는 부분");
+	}
+	
+	
+	
+	public void powerOn() {
+		System.out.println("SamsungTV 전원 ON");
+	}
+	
+	public void powerOff() {
+		System.out.println("SamsungTV 전원 OFF");
+	}
+	
+	public void volumeUp() {
+		//System.out.println("SamsungTV 볼륨 Up");
+		speaker.volumeUp();
+		System.out.println("price : " + this.price);
+	}
+	
+	public void volumeDown() {
+		//System.out.println("SamsungTV 볼륨 Down");
+		speaker.volumeDown();
+	}
+}

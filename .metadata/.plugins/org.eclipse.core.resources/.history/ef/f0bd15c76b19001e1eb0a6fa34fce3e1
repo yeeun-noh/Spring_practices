@@ -1,0 +1,23 @@
+package polymorphism;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
+
+//인터페이스TV를 의존
+public class TVUser {
+
+	public static void main(String[] args) {
+//		TV tv = new SamsungTV(); //인터페이스를 사용함으로써 수정할일 최소화(구현하는 메서드이름 통일)
+//		//TV tv = new LgTV();
+//		
+//		tv.powerOn();
+//		tv.volumeUp();
+//		tv.volumeDown();
+//		tv.powerOff();
+		
+		//1. Spring 컨테이너 구동
+		AbstractApplicationContext factory = new GenericApplicationContext("applicationContext.xml");
+		System.out.println();
+	}
+
+}

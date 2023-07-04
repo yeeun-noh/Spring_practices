@@ -6,26 +6,26 @@ import org.springframework.stereotype.Component;
 public class LgTV implements TV {
 	
 	public LgTV() {
-		System.out.println("LgTV »ı¼ºÀÚ...");
+		System.out.println("LgTV default ìƒì„±ì...");
 	}
 	
 	@Override
 	public void powerOn() {
-		System.out.println("LgTV Àü¿ø ON");
+		System.out.println("LgTV power ON");
 	}
 	
 	@Override
 	public void powerOff() {
-		System.out.println("LgTV Àü¿ø OFF");
+		System.out.println("LgTV power OFF");
 	}
 	
 	@Override
 	public void volumeUp() {
-		System.out.println("LgTV º¼·ı Up");
+		System.out.println("LgTV volume Up");
 	}
 	
 	@Override
 	public void volumeDown() {
-		System.out.println("LgTV º¼·ı Down");
+		System.out.println("LgTV volume Down");
 	}
 }

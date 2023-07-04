@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- bean태그 추가 
+	- lazy-init : "true", "false", "default" 세가지의 옵션 (부하가 많이 발생하는 경우 lazy-init 사용)
+	  - default는 spring의 기본 동작에 맞게 bean을 생성,
+	  - 기본 동작은 false,
+	  - true로 설정할 경우 나중에 Bean을 생성하게 됨
+	-->
+	<!--
+	<bean id="samtv" class="polymorphism.SamsungTV" lazy-init="true"></bean>
+	-->
+	
+	<!-- 
+	<bean id="samtv" class="polymorphism.SamsungTV"></bean>
+	<bean id="lgtv" class="polymorphism.LgTV">
+	--> 
+		<!-- (1)생성자 사용하는 방법:
+		<constructor-arg index="0" ref="sony"></constructor-arg>
+		<constructor-arg index="1" value="3500"></constructor-arg>
+		-->
+		
+		<!-- (2)setter 사용하는 방법: 
+		<property name="speaker" ref="apple"></property>
+		<property name="price" value="2500"></property>
+	</bean>
+	--> 
+	
+	<!-- 
+	<bean id="sony" class="polymorphism.SonySpeaker"></bean>
+	<bean id="apple" class="polymorphism.AppleSpeaker"></bean>
+	-->
+
+
+	<!-- 위의 방식은 xml기반 밑의 방식은 어노테이션기반 (어노테이션을 주로 사용) -->
+	<context:component-scan base-package="polymorphism"></context:component-scan>	
+</beans>
+
+
+
+
+
+
+
+
+
+

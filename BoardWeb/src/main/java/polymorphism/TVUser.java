@@ -2,14 +2,13 @@ package polymorphism;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
-import org.springframework.web.context.support.XmlWebApplicationContext;
 
-//ÀÎÅÍÆäÀÌ½ºTV¸¦ ÀÇÁ¸
+//ì¸í„°í˜ì´ìŠ¤TVë¥¼ ì˜ì¡´
 public class TVUser {
 
 	public static void main(String[] args) {
 	/*
-		TV tv = new SamsungTV(); //ÀÎÅÍÆäÀÌ½º¸¦ »ç¿ëÇÔÀ¸·Î½á ¼öÁ¤ÇÒÀÏ ÃÖ¼ÒÈ­(±¸ÇöÇÏ´Â ¸Ş¼­µåÀÌ¸§ ÅëÀÏ)
+		TV tv = new SamsungTV(); //ì¸í„°í˜ì´ìŠ¤ë¥¼ ì‚¬ìš©í•¨ìœ¼ë¡œì¨ ìˆ˜ì •í• ì¼ ìµœì†Œí™”(êµ¬í˜„í•˜ëŠ” ë©”ì„œë“œì´ë¦„ í†µì¼)
 		//TV tv = new LgTV();
 		
 		tv.powerOn();
@@ -19,17 +18,17 @@ public class TVUser {
 	*/ 
 		
 		
-		//1. Spring ÄÁÅ×ÀÌ³Ê ±¸µ¿
-		//- "applicationContext.xml" ¸¦ ÀĞ°í Ã£¾Æ°¡ ¼öÇà
-		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContext.xml"); //xml¼³Á¤±â¹İ		
-//		AbstractApplicationContext factory2 = new XmlWebApplicationContext("applicationContext.xml");	 //À¥±â¹İ ½ºÇÁ¸µ
+		//1. Spring ì»¨í…Œì´ë„ˆ êµ¬ë™
+		//- "applicationContext.xml" ë¥¼ ì½ê³  ì°¾ì•„ê°€ ìˆ˜í–‰
+		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContext.xml"); //xmlì„¤ì •ê¸°ë°˜		
+//		AbstractApplicationContext factory2 = new XmlWebApplicationContext("applicationContext.xml");	 //ì›¹ê¸°ë°˜ ìŠ¤í”„ë§
 		
 		
-		//2. ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê·ÎºÎÅÍ ÇÊ¿äÇÑ °´Ã¼ ¿äÃ»
+		//2. ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆë¡œë¶€í„° í•„ìš”í•œ ê°ì²´ ìš”ì²­
 		TV tv1 = (TV)factory.getBean("tv");
 		TV tv2 = (TV)factory.getBean("tv");
 		TV tv3 = (TV)factory.getBean("tv");
-		//<bean>¿¡ ÇÏ³ªÀÇ °´Ã¼¸¦ »ı¼ºÇØ tv1,tv2,tv3 ¸ğµÎ Á¢±ÙÇÔ 
+		//<bean>ì— í•˜ë‚˜ì˜ ê°ì²´ë¥¼ ìƒì„±í•´ tv1,tv2,tv3 ëª¨ë‘ ì ‘ê·¼í•¨ 
 		
 		
 		

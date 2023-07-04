@@ -18,12 +18,14 @@
 	</bean>
 	-->
 	
+	
 	<!-- 두번째 사용 (xml설정기반):
 	<bean id="tv" class="polymorphism.SamsungTV">
+		(생성자):
 		<constructor-arg index="0" ref="apple"></constructor-arg>
 		<constructor-arg index="1" value="350000"></constructor-arg>
 		
-		setter를 불러옴:
+		(setter):
 		<property name="speaker" ref="apple"></property>
 		<property name="price" value="15000"></property>
 	</bean>

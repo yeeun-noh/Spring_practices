@@ -6,14 +6,14 @@ import org.springframework.stereotype.Component;
 public class AppleSpeaker implements Speaker {
 
 	public AppleSpeaker() {
-		System.out.println("AppleSpeaker °´Ã¼ »ı¼º");
+		System.out.println("AppleSpeaker ê°ì²´ ìƒì„±");
 	}
 	
 	public void volumeUp() {
-		System.out.println("AppleSpeaker º¼·ı Up");
+		System.out.println("AppleSpeaker volume Up");
 	}
 	
 	public void volumeDown() {
-		System.out.println("AppleSpeaker º¼·ı Down");
+		System.out.println("AppleSpeaker volume Down");
 	}
 }

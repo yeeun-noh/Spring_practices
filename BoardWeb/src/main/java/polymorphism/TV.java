@@ -1,6 +1,6 @@
 package polymorphism;
 
-//ÀÎÅÍÆäÀÌ½º¸¦ »ç¿ëÇÔÀ¸·Î½á ¼öÁ¤ÇÒÀÏ ÃÖ¼ÒÈ­(±¸ÇöÇÏ´Â ¸Þ¼­µåÀÌ¸§ ÅëÀÏ)
+//ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ì‚¬ìš©í•¨ìœ¼ë¡œì¨ ìˆ˜ì •í• ì¼ ìµœì†Œí™”(êµ¬í˜„í•˜ëŠ” ë©”ì„œë“œì´ë¦„ í†µì¼)
 public interface TV {
 
 	public void powerOn();

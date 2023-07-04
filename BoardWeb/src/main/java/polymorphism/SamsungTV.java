@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("tv") //°´Ã¼¸í ÁöÁ¤°¡´É
+@Component("tv") //ê°ì²´ëª… ì§€ì •ê°€ëŠ¥
 public class SamsungTV implements TV {
 	
-	@Autowired //Å¸ÀÔÀÌ ÀÏÄ¡ÇÏ´Â °´Ã¼ ÀÚµ¿ ÁÖÀÔ (°´Ã¼¿¡ ´ëÇÑ ÀÇÁ¸¼ºÀ» ÁÖÀÔ)
-	@Qualifier("apple") //ÇÊµå, »ı¼ºÀÚ, ÀÔ·Â ÆÄ¶ó¹ÌÅÍ°¡ ¿©·¯ °³ÀÎ ¸Ş¼Òµå¿¡ Àû¿ë(""¿¡ µû¶ó ÁÖÀÔ)
+	@Autowired //íƒ€ì…ì´ ì¼ì¹˜í•˜ëŠ” ê°ì²´ ìë™ ì£¼ì… (ê°ì²´ì— ëŒ€í•œ ì˜ì¡´ì„±ì„ ì£¼ì…)
+	@Qualifier("apple") //í•„ë“œ, ìƒì„±ì, ì…ë ¥ íŒŒë¼ë¯¸í„°ê°€ ì—¬ëŸ¬ ê°œì¸ ë©”ì†Œë“œì— ì ìš©(""ì— ë”°ë¼ ì£¼ì…)
 	
 	private Speaker speaker;
 	private int price;
@@ -35,46 +35,46 @@ public class SamsungTV implements TV {
 		System.out.println("SamsungTV(Speaker speaker, int price)");
 	}	
 	
-	//»ı¼ºÀÚ:
+	//ìƒì„±ì:
 	public SamsungTV(Speaker speaker) {
 		this.speaker = speaker;
-		System.out.println("SamsungTV(Speaker speaker) °´Ã¼ »ı¼º");
+		System.out.println("SamsungTV(Speaker speaker) ê°ì²´ ìƒì„±");
 	}
 	
 
-	public SamsungTV() { //°´Ã¼ »ı¼ºµÇ¸é ½ÇÇàµÇ°Ô ±âº»»ı¼ºÀÚ ¸¸µë => È®ÀÎ°¡´É
-		System.out.println("SamsungTV() °´Ã¼ »ı¼º");
+	public SamsungTV() { //ê°ì²´ ìƒì„±ë˜ë©´ ì‹¤í–‰ë˜ê²Œ ê¸°ë³¸ìƒì„±ì ë§Œë“¬ => í™•ì¸ê°€ëŠ¥
+		System.out.println("SamsungTV() ê°ì²´ ìƒì„±");
 	}
 	
 	//init-method
-	public void initMethod() { //ÃÊ±â¼³Á¤
-		System.out.println("°´Ã¼ ÃÊ±âÈ­ ÀÛ¾÷ ¼öÇà"); 
+	public void initMethod() { //ì´ˆê¸°ì„¤ì •
+		System.out.println("ê°ì²´ ì´ˆê¸°í™” ì‘ì—… ìˆ˜í–‰"); 
 
 	}
 	
 	//destroy-method
-	public void destoryMethod() { //close() ¿¬°á ÇØÁ¦ ·ÎÁ÷ µîÀ» È£ÃâÇÒ¶§ È°¿ë
-		System.out.println("°´Ã¼ ¼Ò¸ê½Ã µ¿ÀÛÇÏ´Â ºÎºĞ");
+	public void destoryMethod() { //close() ì—°ê²° í•´ì œ ë¡œì§ ë“±ì„ í˜¸ì¶œí• ë•Œ í™œìš©
+		System.out.println("ê°ì²´ ì†Œë©¸ì‹œ ë™ì‘í•˜ëŠ” ë¶€ë¶„");
 	}
 	
 	
 	
 	public void powerOn() {
-		System.out.println("SamsungTV Àü¿ø ON");
+		System.out.println("SamsungTV ì „ì› ON");
 	}
 	
 	public void powerOff() {
-		System.out.println("SamsungTV Àü¿ø OFF");
+		System.out.println("SamsungTV ì „ì› OFF");
 	}
 	
 	public void volumeUp() {
-		//System.out.println("SamsungTV º¼·ı Up");
+		//System.out.println("SamsungTV ë³¼ë¥¨ Up");
 		speaker.volumeUp();
 		System.out.println("price : " + this.price);
 	}
 	
 	public void volumeDown() {
-		//System.out.println("SamsungTV º¼·ı Down");
+		//System.out.println("SamsungTV ë³¼ë¥¨ Down");
 		speaker.volumeDown();
 	}
 }

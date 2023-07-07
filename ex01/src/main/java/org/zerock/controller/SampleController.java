@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.SampleDTO;
 import org.zerock.domain.TodoDTO;
@@ -48,6 +49,7 @@ public class SampleController {
 		log.info("list....");
 	}
 	
+//	-----------------------------------------------------------------------------------------
 	
 //	/sample/ex1?name=aaa&age=20 치면 => ex1() 실행 (무조건 값을 설정해야함, 기본값을 설정하지 않았기 때문)
 	@GetMapping("/ex1")
@@ -226,7 +228,34 @@ public class SampleController {
 		log.info("id: {}", id);
 		return "/sample/ex13";
 	}
+
+//	-----------------------------------------------------------------------------------------
+//	-파일 업로드:
 	
+	@GetMapping("/upload") //sample/upload.jsp 찾아감 (void타입이므로)
+	public void exUpload() {
+		log.info("/exUpload....");
+	}
+	
+	
+	@PostMapping("/exUploadPost")
+	public void exUploadPost(ArrayList<MultipartFile> files) {
+		
+//		files.forEach(file->{
+//			log.info("-------------------");
+//			log.info("name: {}", file.getOriginalFilename());
+//			log.info("name: {}", file.getSize());
+//		});
+//		위 아래 두가지 방법 모두 가능:
+		for(MultipartFile file : files) {
+			log.info("-------------------");
+			log.info("name: {}", file.getOriginalFilename());
+			log.info("name: {}", file.getSize());
+		}
+	}
+	
+//	-----------------------------------------------------------------------------------------
+
 }
 
 

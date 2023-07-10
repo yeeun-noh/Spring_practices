@@ -75,6 +75,49 @@ public class BoardMapperTests {
 		
 		log.info("result: {}", result);
 	}
+	
+	//=====연습=====
+	//추가
+	@Test
+	public void Insert() {
+		BoardVO vo = new BoardVO();
+		vo.setBno(4L);
+		vo.setTitle("테스트");
+		vo.setContent("테스트중");
+		vo.setWriter("노예은");
+		
+		int result = boardMapper.insert(vo);
+		log.info("result: {}", result);
+	}
+	
+	//읽기
+	@Test
+	public void Read() {
+		BoardVO vo = boardMapper.read(3L);
+		log.info("vo: {}", vo);
+	}
+	
+	
+	//수정
+	@Test
+	public void Update() {
+		BoardVO vo = new BoardVO();
+		vo.setTitle("테스트2");
+		vo.setContent("테스트중2");
+		vo.setWriter("노예은2");
+		vo.setBno(17L);
+		
+		int result = boardMapper.update(vo);
+		log.info("result: {}", result);
+	}
+	
+	//삭제
+	@Test
+	public void Delete() {
+		int result = boardMapper.delete(17L);
+		log.info("result: {}", result);
+	}
+	
 }
 
 

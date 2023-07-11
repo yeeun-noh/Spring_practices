@@ -18,7 +18,7 @@ CREATE TABLE tbl_board(
 @Data
 public class BoardVO {
 
-	private Long bno; //==long
+	private Long bno; //!=long
 	private String title;
 	private String content;
 	private String writer;

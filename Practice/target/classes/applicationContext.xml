@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+	<bean id="tv" class="polymorphism.SamsungTV" init-method="init" destroy-method="destory" scope="prototype"></bean>
+ -->
+
+	<bean id="tv" class="polymorphism.SamsungTV">
+		<!-- (1)생성자 사용: <constructor-arg ref="apple"></constructor-arg> -->
+		<!-- (2)setter 사용:--> <property name="speaker" ref="apple"></property>
+	</bean>
+	
+	
+	<bean id="lg" class="polymorphism.LgTV"></bean>
+	
+	<bean id="sony" class="polymorphism.SonySpeaker"></bean>
+	<bean id="apple" class="polymorphism.AppleSpeaker"></bean>
+</beans>

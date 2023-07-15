@@ -26,7 +26,7 @@ public class SampleTests {
 	public void testExist() {
 //		System.out.println("restaurant: " + restaurant);
 //		sysout 가급적 사용 자제 (INSTEAD log.info 사용)
-		log.info("restaurant=> {}", restaurant);			//restaurant=> Restaurant(chef=Chef())
+		log.info("restaurant=> {}", restaurant);		//restaurant=> Restaurant(chef=Chef())
 		log.info("restaurant: {}", restaurant.getChef());	//restaurant: Chef()
 	}
 	
